@@ -1,1 +1,139 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    // --navy: #0a192f;
+    --navy: rgb(87, 4, 87);
+    --light-navy: purple;
+    // --light-navy: #112240;
+    --lightest-navy: #233554;
+    --slate: #8892b0;
+    --light-slate: #8892b0;
+    --lightest-slate: #ccd6f6;
+    --white: #e6f1ff;
+    --green: pink;
+    // --green: #64ffda;
+    --font-sans: "Calibre", "Inter", "San Francisco", "SF Pro Text", -apple-system, system-ui, sans-serif;
+    --font-mono: "SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    background-color: var(--navy) !important;
+    padding: 0 !important;
+    overflow: hidden;
+    height: 100%;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.flex-row {
+    flex-direction: row;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.button {
+    cursor: pointer;
+}
+
+.green {
+    color: var(--green);
+}
+
+.lightest-slate {
+    color: var(--lightest-slate);
+}
+
+.light-slate {
+    color: var(--light-slate);
+}
+
+.green-outline-button {
+    height: 40px;
+    background-color: transparent;
+    outline: 1px solid var(--green);
+    color: var(--green);
+    border-radius: 4px;
+    padding: 0 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    &:hover {
+        background-color: rgba($color: #64ffda, $alpha: 0.1);
+        color: var(--green);
+    }
+    &:disabled {
+        cursor: not-allowed;
+        background-color: var(--navy) !important;
+        color: var(--slate) !important;
+        outline-color: var(--light-slate);
+    }
+}
+
+.field {
+    input,
+    textarea {
+        border: none !important;
+        outline: 1px solid var(--green) !important;
+        background-color: var(--navy) !important;
+        color: var(--green) !important;
+    }
+
+    label {
+        color: var(--lightest-slate) !important;
+        font-size: 16px !important;
+    }
+
+    &.error {
+        input, textarea {
+            outline: 1px solid red !important;
+            color: red !important;
+        }
+
+        label {
+            color: red !important;
+        }
+    } 
+    
+}
+
+.ui.segment {
+    background-color: var(--light-navy) !important;
+    border: 1px solid var(--green);
+}
+
+.error-text {
+    color: red;
+}
