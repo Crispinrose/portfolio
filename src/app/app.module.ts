@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { SuiModule } from '@richardlt/ng2-semantic-ui';
+import { SuiDropdownModule, SuiModule } from '@richardlt/ng2-semantic-ui';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,7 +27,8 @@ import { SkillCardComponent } from './skill-card/skill-card.component';
     AppRoutingModule,
     SuiModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SuiDropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]
